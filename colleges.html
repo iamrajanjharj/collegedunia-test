@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Colleges</title>
+
+	<script type="text/javascript" src="jquery-3.5.1.min.js"></script>
+	<script type="text/javascript">
+		
+		$(function()
+		{
+			$.getJSON("colleges.json", function(result){
+			    $.each(result, function(i, field){
+			      
+			    });
+			  });
+		});
+
+	</script>
+
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+	<style type="text/css">
+	
+		#container
+		{
+			font-family: 'Roboto', sans-serif;
+			position: absolute;
+			top: 0;
+			left: 0;
+			height: 100%;
+			width: 100%;
+		}
+
+		#title
+		{
+			position: absolute;
+			left: 5%;
+			color: grey;
+
+		}
+
+		#collegesHolder
+		{
+			position:absolute;
+			top: 10%;
+			height: auto;
+			left: 5%;
+			width: 85%;
+			padding: 2%;
+		}
+
+		.college
+		{
+			position: relative;
+			top: 10%;
+			margin: 2%;
+			float:left;
+			width: 45%;
+			height: auto;
+			border-radius: 3px;
+		}
+
+		.header
+		{
+			position: relative;
+			height: 230px;
+			width: 100%;
+			background-image: url('college_02.jpg');
+	      	background-size: cover;
+	      	z-index: 5;
+		}
+
+		.cover
+		{
+			background: rgba(0,0,0,0.7);
+			position: relative;
+			height: 230px;
+			width: 100%;
+			z-index: 10;
+		}
+
+		.cover-footer
+		{
+			position: relative;
+			top:52%;
+			left:0;
+			width: 100%;
+			height: 50px;
+		}
+
+		.tag
+		{
+			background: white;
+			font-family: sans-serif;
+			font-weight: bold;
+			color: grey;
+			font-size: 85%;
+			position: relative;
+			float: left;
+			height: 20px;
+			width:auto;
+			padding: 6px;
+			padding-top: 8px; 
+			margin:5px;
+			margin-top:10px;
+			border-radius: 20px;
+
+		}
+
+		.ranking
+		{
+			font-weight: bold;
+			color: whitesmoke;
+			font-size: 85%;
+			position: relative;
+			float: right;
+			height: 20px;
+			width:auto;
+			padding: 6px;
+			padding-top: 8px; 
+			margin:5px;
+			margin-top:10px;
+			border-radius: 20px;
+
+		}
+
+		.rating
+		{
+			background: orange;
+			position: relative;
+			color: white;
+			top: 10%;
+			left: 80%;
+			height: 40px;
+			width: 70px;
+			text-align: center;
+			padding: 7px;
+			padding-bottom: 15px;
+			border-radius: 5px;
+		}
+
+		.rating-val
+		{
+			font-size: 150%;
+			font-weight: bold;
+		}
+
+		.footer
+		{
+			position: relative;
+			height: 120px;
+			width: 94%;
+			padding: 3%;
+		}
+
+		.college-name
+		{
+			color: grey;
+			position: relative;
+			width: 60%;
+			font-size: 130%;
+			float: left;
+			font-weight: bolder;
+		}
+
+		.real-price
+		{
+			border: 1px solid pink;
+			color:grey;
+			position: relative;
+			top: 0px;
+			text-align: center;
+			width: 20%;
+			font-size: 70%;
+			font-weight: bolder;
+			float: right;
+			padding: 5px;
+		}
+
+		.percent
+		{
+			color: white;
+			background: red;
+			padding: 2px;
+			margin: 5px;
+		}
+
+		.nearest_place
+		{
+			position: relative;
+			top: 30%;
+			width: 80%;
+			height: 20px;
+			margin-top: 5px;
+			margin-bottom: 5px;
+			font-size: 90%;
+		}
+
+		.first
+		{
+			position: relative;
+			font-weight: bolder;
+			float:left;
+		}
+
+		.second
+		{
+			position: relative;
+			float: left;
+		}
+
+		.offer_text
+		{
+			background: #00fa9a;
+			border-radius: 0px 10px 10px 0px; 
+			position: relative;
+			top: 30%;
+			width: 80%;
+			height: 20px;
+			margin-top: 5px;
+			margin-bottom: 5px;
+			font-size: 90%;
+			color: #333333;
+		}
+
+
+
+	</style>
+
+</head>
+<body>
+
+<div id="container">
+
+	<h3 id="title">Colleges in North India</h3>
+
+	<div id="collegesHolder">
+
+		<div class="college">
+
+			<div class="header">
+				
+				<div class="cover">
+
+					<div class="rating">
+						<span class="rating-val">3.9</span><span style="font-size: 120%;">/5</span><br>
+						<span class="rating_remarks" style="font-size: 80%;font-weight: bold;">Very Good</span>
+					</div>
+					
+					<div class="cover-footer">
+						
+						<div class="tag">Best colleges in 2018</div>
+						<div class="tag">2kms away</div>
+
+						<div class="ranking">#7 in 260 colleges in north campus</div>
+
+					</div>
+
+				</div>
+			
+			</div>
+			
+
+			<div class="footer">
+				
+				<div class="college-name">
+					Hansraj College Delhi University - 1
+				</div>
+
+		<div class="real-price"><span class="pp" style="text-decoration: line-through;">&#x20B9;6000 </span><span class="percent"> &#9679; 20</span></div>
+
+		<div class="nearest_place">
+				<span class="first">Near Vishwavidyalya Metro Station |&nbsp;&nbsp;</span><span class="second">2 Kms away from bus stand</span>
+		</div><br>
+
+		<div class="nearest_place">
+				2.5kms from GTB Nagar, 7 Kms from Rajiv Chowk
+		</div>
+
+		<div class="offer_text">
+				2.5kms from GTB Nagar, 7 Kms from Rajiv Chowk
+		</div>
+
+			</div>
+			
+		</div>
+
+		<div class="college">
+
+			<div class="header">
+				
+				<div class="cover">
+
+					<div class="rating">
+						<span class="rating-val">3.9</span><span style="font-size: 120%;">/5</span><br>
+						<span class="rating_remarks" style="font-size: 80%;font-weight: bold;">Very Good</span>
+					</div>
+					
+					<div class="cover-footer">
+						
+						<div class="tag">Best colleges in 2018</div>
+						<div class="tag">2kms away</div>
+
+						<div class="ranking">#7 in 260 colleges in north campus</div>
+
+					</div>
+
+				</div>
+			
+			</div>
+			
+
+			<div class="footer">
+				
+				<div class="college-name">
+					Hansraj College Delhi University - 2
+				</div>
+
+		<div class="real-price"><span class="pp" style="text-decoration: line-through;">&#x20B9;6000 </span><span class="percent"> &#9679; 20</span></div>
+
+		<div class="nearest_place">
+				<span class="first">Near Vishwavidyalya Metro Station |&nbsp;&nbsp;</span><span class="second">2 Kms away from bus stand</span>
+		</div><br>
+
+		<div class="nearest_place">
+				2.5kms from GTB Nagar, 7 Kms from Rajiv Chowk
+		</div>
+
+		<div class="offer_text">
+				2.5kms from GTB Nagar, 7 Kms from Rajiv Chowk
+		</div>
+
+			</div>
+			
+		</div>
+		
+	</div>
+
+
+
+		
+	</div>
+
+
+
+</div>
+
+</body>
+</html>
